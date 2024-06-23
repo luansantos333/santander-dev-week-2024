@@ -12,7 +12,7 @@ public class User {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @Column
     private String userName;
     @OneToOne (cascade = CascadeType.ALL)
@@ -24,12 +24,19 @@ public class User {
     @OneToMany (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> newsList;
 
+    public String getUserName() {
+        return userName;
+    }
 
-    public long getId() {
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
