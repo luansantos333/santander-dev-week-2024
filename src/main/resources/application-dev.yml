@@ -13,7 +13,7 @@ datasource:
   h2:
     console:
       enabled: true
-      path: /h2-console
+      path: /h2
       settings:
         trace: false
         web-allow-others: false
